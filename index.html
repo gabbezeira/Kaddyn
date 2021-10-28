@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/meta-icons/rockstar/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/meta-icons/rockstar/favicon-16x16.png">
+        <link href="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/meta-icons/rockstar/favicon.ico" type="image/x-icon" rel="icon"/>
+        <link href="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/meta-icons/rockstar/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+
+        <title>Level Up - Contas modificadas para GTA Online</title>
+    </head>
+    <body>
+
+        <!--- Menu -->
+        <header class="header">
+            <a href="#" class="header__logo">Level Up</a>
+            <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+            <nav class="nav" id="nav-menu">
+                <div class="nav__content bd-grid">
+                    <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+                    <div class="nav__perfil">
+                        <!--<div class="nav__img">
+                            <img src="assets/img/perfil.png" alt="">
+                        </div>-->
+                        <div>
+                            <a href="#" class="nav__name">Level Up</a>
+                        </div>
+                    </div>
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Sobre</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Pacotes</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Save Wizard</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__social">
+                        <a href="#" class="nav__social-icon"><ion-icon name="logo-youtube"></ion-icon></a>
+                        <a href="#" class="nav__social-icon"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#" class="nav__social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--- Barra de Load -->
+        <div class="container-barra">
+            <div class="barra"></div>
+        </div>
+
+        <!--- Banner -->
+        <section id="apresentation-area">
+            <div class="banner-content-area">
+                <div class="banner-img-area">
+                    <div class="slidershow">
+                        <div class="slides">
+
+                            <input type="radio" name="r" id="r1">
+                            <input type="radio" name="r" id="r2">
+                            <input type="radio" name="r" id="r3">
+                            <input type="radio" name="r" id="r4">
+
+                            <div class="slide s1"><img src="/assets/img/bg.jpeg" alt=""></div>
+                            <div class="slide s2"><img src="/assets/img/bg-2.jpeg" alt=""></div>
+                            <div class="slide s3"><img src="/assets/img/bg-3.jpeg" alt=""></div>
+                            <div class="slide s4"><img src="/assets/img/bg-4.jpeg" alt=""></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-text-area">
+                    <div class="area-text">
+                        <div class="text-banner">
+                            <p>Grand Theft Auto Online</p>
+                            <h1>Compre tudo da Los Santos Tuners!</h1>
+                        </div>
+                        <button class="button"><a href="">assistir</a></button>
+
+                        <div class="navigation">
+                            <label for="r1" class="bar"></label>
+                            <label for="r2" class="bar"></label>
+                            <label for="r3" class="bar"></label>
+                            <label for="r4" class="bar"></label>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+        <!--- Informações principais -->
+        <section id="principal-info">
+            <div class="principal-infos">
+                <div class="texts-infos">
+                    <div class="infos">
+                    <h3>Já pensou em ser um super milionário no GTA Online? Se sim nós podemos te ajudar!</h3>
+                    <p>Cansado de fazer milhares de missões cansativas e repetitivas no GTA Online e ainda sim não ter dinheiro? então adiquira sua conta modificada para qualquer plataforma (PS4/PS5 XBOX SERIE S/X XBOX ONE e PC), ou faça um up sua conta com a gente e se torne um verdadeiro milionário <span>sem risco de ban</span>.</p>
+                    </div>
+                </div>
+                <div class="image-infos">
+                    <img src="/assets/img/image-infos.jpeg" alt="GTA Online">
+                </div>
+                <button class="button"><a href="">Ver Contas</a></button>
+            </div>
+        </section>
+
+        <!--- Vídeo -->
+        <section id="video-area">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/J_5KjYso1U0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allownetworking=”internal”></iframe>
+
+        </section>
+        
+        <!--- Script Barra de Load -->
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function(){ 
+                setTimeout(function() {
+                    $(".barra").fadeOut('fast').empty();
+                }, 900);
+            }, false);
+
+            $(window).on('load',function(){
+            $('#myModal').modal('show'); });
+        </script>
+
+
+
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/slideButton.js"></script>
+    </body>
+</html>
