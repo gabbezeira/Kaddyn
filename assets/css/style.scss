@@ -125,14 +125,12 @@ img{
         justify-content: center;
         padding-top: .25rem;
         margin-bottom: .8rem;
-        width: 56px;
+        width: 100px;
         height: 56px;
-        background-color: var(--yellow-color);
-        border-radius: 50%;
         overflow: hidden;
 
         & img{
-            width: 46px;
+            width: auto;
         }
     }
     &__name{
@@ -206,24 +204,30 @@ img{
             align-items: center;
         }
         &__img{
-            width: 32px;
-            height: 32px;
+            padding-top: 1.5rem;
+            width: 100px;
+            height: 50px;
             margin-right: .5rem;
             margin-bottom: 0;
             align-items: center;
 
             & img{
-                width: 26px;
+                width: 100px;
             }
         }
 
         &__list{
             display: flex;
         }
+        &__social{
+            display: flex;
+            padding-top: 1rem;
+        }
         &__item{
             margin: 0 .25rem;
         }
         &__link{
+            
             padding: .5rem .8rem;
             border-radius: .25rem;
 
@@ -413,7 +417,7 @@ input[name="r"]{
 
 .slide {
     width: 20%;
-    transition: 0.1s;
+    transition: all 0.1s ease;
 }
 
 .slide img {
@@ -860,6 +864,7 @@ input[name="r"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 

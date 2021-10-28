@@ -160,15 +160,13 @@ img {
           justify-content: center;
   padding-top: .25rem;
   margin-bottom: .8rem;
-  width: 56px;
+  width: 100px;
   height: 56px;
-  background-color: var(--yellow-color);
-  border-radius: 50%;
   overflow: hidden;
 }
 
 .nav__img img {
-  width: 46px;
+  width: auto;
 }
 
 .nav__name {
@@ -256,8 +254,9 @@ img {
             align-items: center;
   }
   .nav__img {
-    width: 32px;
-    height: 32px;
+    padding-top: 1.5rem;
+    width: 100px;
+    height: 50px;
     margin-right: .5rem;
     margin-bottom: 0;
     -webkit-box-align: center;
@@ -265,12 +264,18 @@ img {
             align-items: center;
   }
   .nav__img img {
-    width: 26px;
+    width: 100px;
   }
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .nav__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1rem;
   }
   .nav__item {
     margin: 0 .25rem;
@@ -480,8 +485,8 @@ input[name="r"] {
 
 .slide {
   width: 20%;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .slide img {
