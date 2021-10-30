@@ -52,7 +52,7 @@
 }
 
 body {
-  background-color: var(--dark-color-alt);
+  background-color: var(--dark-color-alt) !important;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -640,135 +640,164 @@ input[name="r"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  left: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
-  height: 700px;
+  height: auto;
+  padding: 50px;
 }
 
-#cards-area .pen {
-  padding: 0;
-  margin: 0;
-  max-width: 550px;
-  width: 100%;
-  margin: auto 0;
-  opacity: 0;
+#cards-area .product-container .title-card-area {
+  text-align: center;
+}
+
+#cards-area .product-container .title-card-area h1 {
+  font-family: 'BankGothic', sans-serif;
+  font-size: 50px;
+  color: var(--white-color);
+}
+
+#cards-area .card-content .icon-color {
+  color: var(--yellow-color);
+}
+
+#cards-area a,
+#cards-area a:hover,
+#cards-area a:active {
+  text-decoration: none;
+  color: var(--dark-color-alt);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#cards-area .product-card {
   position: relative;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  -webkit-animation: 1s appear 1 forwards;
-  animation: 1s appear 1 forwards;
+  margin: 20px 0px;
+  z-index: 1;
+  display: block;
+  background: var(--dark-color);
+  min-width: 270px;
+  height: 470px;
+  -webkit-box-shadow: 12px 15px 20px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 12px 15px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: .5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-#cards-area .stage {
-  cursor: pointer;
-  max-width: 635px;
+#cards-area .product-card .card-thumbnail {
+  background: var(--dark-color);
+  /* height: 400px; */
+  overflow: hidden;
+}
+
+#cards-area .product-card .card-thumbnail img {
+  display: block;
+  width: 120%;
+  -webkit-transition: all 0.3s cubic-bezier(0, 0.5, 0.5, 1);
+  transition: all 0.3s cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+#cards-area .product-card:hover .card-thumbnail img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: .6;
+}
+
+#cards-area .fa-send:before {
+  color: var(--dark-color);
+  position: absolute;
+  top: 15px;
+  left: 13px;
+}
+
+#cards-area .card-content h1, #cards-area .card-content h2 {
+  font-family: 'BankGothic', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#cards-area .card-content p {
+  font-family: 'BankGothic', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+#cards-area .card-content span {
+  font-weight: 800;
+  color: var(--yellow-color);
+}
+
+#cards-area .product-card .card-content {
+  position: absolute;
+  bottom: 0;
+  background: var(--dark-color);
   width: 100%;
-  height: 400px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  padding: 40px 30px;
+  -webkti-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
 }
 
-#cards-area .element {
-  background: green;
-  width: 202px;
-  -webkit-transform-origin: 50% 50%;
-  height: inherit;
-  margin: 0 7px 0 0;
-  display: inline-block;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+#cards-area .product-card .card-content .send {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  background: var(--yellow-color);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  opacity: 0;
 }
 
-#cards-area .element.active {
-  width: 282px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+#cards-area .product-card:hover .card-content .send {
+  opacity: 1;
 }
 
-#cards-area .element.inactive {
-  width: 162px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  opacity: 0.4;
-}
-
-#cards-area .element.xbox {
-  background: url("https://wallpapercave.com/wp/wp2972942.jpg") 50% 0 no-repeat;
-  background-size: cover;
-}
-
-#cards-area .element.ps {
-  background: url("https://wallpapercave.com/wp/wp2605496.jpg") 50% 0 no-repeat;
-  background-size: cover;
-}
-
-#cards-area .element.pc {
-  background: url("../img/PC.png") 50% 0 no-repeat;
-  background-size: cover;
-}
-
-#cards-area .element:last-of-type {
+#cards-area .product-card .card-content .card-title {
   margin: 0;
+  padding: 0 0 10px;
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-@media all and (min-width: 900px) {
-  #cards-area .pen {
-    max-width: 890px;
-  }
-  #cards-area .element {
-    width: 286px;
-  }
-  #cards-area .element.inactive {
-    width: 246px;
-  }
-  #cards-area .element.active {
-    width: 366px;
-  }
-  #cards-area .stage {
-    max-width: 890px;
-    height: 600px;
-  }
+#cards-area .product-card .card-content .card-sub-title {
+  margin: 0;
+  padding: 0 0 20px;
+  color: var(--yellow-color);
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
-@media all and (max-width: 660px) {
-  #cards-area .pen {
-    max-width: 335px;
-  }
-  #cards-area .element {
-    width: 101px;
-  }
-  #cards-area .element.inactive {
-    width: 61px;
-  }
-  #cards-area .element.active {
-    width: 181px;
-  }
-  #cards-area .stage {
-    max-width: 335px;
-  }
+#cards-area .product-card .card-content .description {
+  color: var(--white-color);
+  font-size: 12px;
+  line-height: 1.8em;
+  display: none;
+  /* height: 0px; */
 }
 
-@-webkit-keyframes appear {
-  15% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#cards-area .product-card .card-content .post-meta {
+  margin: 30px 0 0;
+  color: var(--white-color);
 }
 
-@keyframes appear {
-  15% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#cards-area .product-card .card-content .post-meta .time-stamp {
+  margin: 0 80px 0 0;
+}
+
+#cards-area .product-card .card-content .post-meta a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #principal-info-2 {
@@ -832,6 +861,11 @@ input[name="r"] {
   border-radius: 0.25rem;
   text-transform: uppercase;
   background-color: var(--yellow-color);
+}
+
+.principal-infos-2 .info-price .valor .descount-icon {
+  float: left;
+  padding-left: 10px;
 }
 
 .principal-infos-2 .info-price .valor a {
@@ -961,50 +995,50 @@ input[name="r"] {
           align-items: center;
 }
 
-#contact-area .container {
+#contact-area .container-contact {
   width: 40%;
   height: 100%;
 }
 
-#contact-area .container textarea:focus, #contact-area .container input:focus {
+#contact-area .container-contact textarea:focus, #contact-area .container-contact input:focus {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
   border: 1px solid var(--yellow-color);
   outline: 0;
 }
 
-#contact-area .container textarea:hover, #contact-area .container input:hover {
+#contact-area .container-contact textarea:hover, #contact-area .container-contact input:hover {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
   border: 1px solid var(--yellow-color);
   outline: 0;
 }
 
-#contact-area .container input::-webkit-input-placeholder, #contact-area .container textarea::-webkit-input-placeholder {
+#contact-area .container-contact input::-webkit-input-placeholder, #contact-area .container-contact textarea::-webkit-input-placeholder {
   font-family: 'HelveticaNowText', Helvetica, sans-serif;
   font-weight: lighter;
   color: var(--white-color-two);
 }
 
-#contact-area .container input:-ms-input-placeholder, #contact-area .container textarea:-ms-input-placeholder {
+#contact-area .container-contact input:-ms-input-placeholder, #contact-area .container-contact textarea:-ms-input-placeholder {
   font-family: 'HelveticaNowText', Helvetica, sans-serif;
   font-weight: lighter;
   color: var(--white-color-two);
 }
 
-#contact-area .container input::-ms-input-placeholder, #contact-area .container textarea::-ms-input-placeholder {
+#contact-area .container-contact input::-ms-input-placeholder, #contact-area .container-contact textarea::-ms-input-placeholder {
   font-family: 'HelveticaNowText', Helvetica, sans-serif;
   font-weight: lighter;
   color: var(--white-color-two);
 }
 
-#contact-area .container input::placeholder, #contact-area .container textarea::placeholder {
+#contact-area .container-contact input::placeholder, #contact-area .container-contact textarea::placeholder {
   font-family: 'HelveticaNowText', Helvetica, sans-serif;
   font-weight: lighter;
   color: var(--white-color-two);
 }
 
-#contact-area .container h1 {
+#contact-area .container-contact h1 {
   margin-top: 50px;
   margin-bottom: -50px;
   text-align: center;
@@ -1013,7 +1047,7 @@ input[name="r"] {
   color: var(--white-color);
 }
 
-#contact-area .container .form-contact {
+#contact-area .container-contact .form-contact {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1022,7 +1056,7 @@ input[name="r"] {
   font-family: 'BankGothic', sans-serif;
 }
 
-#contact-area .container .form-contact-input {
+#contact-area .container-contact .form-contact-input {
   width: 100%;
   color: var(--yellow-color);
   font-size: 18px;
@@ -1037,7 +1071,7 @@ input[name="r"] {
   transition: all .2s ease;
 }
 
-#contact-area .container .form-contact-textarea {
+#contact-area .container-contact .form-contact-textarea {
   width: 100%;
   color: #292929;
   font-size: 18px;
@@ -1053,7 +1087,7 @@ input[name="r"] {
   transition: all .2s ease;
 }
 
-#contact-area .container .form-contact-button {
+#contact-area .container-contact .form-contact-button {
   width: 100%;
   font-family: 'BankGothic', sans-serif;
   font-size: 25px;
@@ -1068,12 +1102,12 @@ input[name="r"] {
   transition: all .2s ease;
 }
 
-#contact-area .container .form-contact-button:hover {
+#contact-area .container-contact .form-contact-button:hover {
   color: var(--white-color);
 }
 
 /* footer */
-.container {
+.container-footer {
   max-width: 1170px;
   margin: auto;
 }
@@ -1220,8 +1254,8 @@ ul {
 }
 
 [data-anime="top"] {
-  -webkit-transform: translate3d(0, -50px, 0);
-          transform: translate3d(0, -50px, 0);
+  -webkit-transform: translate3d(0, 400px, 0);
+          transform: translate3d(0, 400px, 0);
 }
 
 [data-anime].animate {

@@ -1,7 +1,28 @@
-$('nav a').click(function(e){
+
+$('.nav__menu a').click(function(e){
 	e.preventDefault();
 	var id = $(this).attr('href'),
-			menuHeight = $('nav').innerHeight(),
+			menuHeight = $('.nav__menu').innerHeight(),
+			targetOffset = $(id).offset().top;
+	$('html, body').animate({
+		scrollTop: targetOffset - menuHeight
+	}, 300);
+});
+
+
+$(function(){
+	$('.product-card').hover(function() {
+	   $(this).find('.description').animate({
+		 height: "toggle",
+		 opacity: "toggle"
+	   }, 300);
+	 });
+});
+
+$('.bottom-links a').click(function(e){
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			menuHeight = $('.bottom-links').innerHeight(),
 			targetOffset = $(id).offset().top;
 	$('html, body').animate({
 		scrollTop: targetOffset - menuHeight
