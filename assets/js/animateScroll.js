@@ -30,5 +30,5 @@ const debounce = function(func, wait, immediate) {
   if(target.length) {
     window.addEventListener('scroll', debounce(function() {
       animeScroll();
-    }, 70));
+    }, 20));
   }
