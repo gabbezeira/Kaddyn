@@ -1403,8 +1403,7 @@ ul {
     font-size: 18px;
   }
   .principal-infos nav.button {
-    margin-top: -30px;
-    margin: 20px;
+    margin: 0px;
   }
   .principal-infos .image-infos {
     display: none;
