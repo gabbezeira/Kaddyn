@@ -36,6 +36,11 @@
 *,::before,::after{
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     background-color: var(--dark-color-alt) !important;
