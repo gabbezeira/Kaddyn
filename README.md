@@ -1,8 +1,8 @@
 <img src="image-readme.png" alt="exemplo imagem">
 
-# Kaddyn Level Up
+# Kadynn Level Up
 
-Site desenvolvido para a venda de contas modificadas do game Grand Theft Auto V.
+Site desenvolvido para a venda de contas modificadas do game Grand Theft Auto V. (https://kadynn.com.br)
 
 ### Acessar
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://kadynn.com.br)
