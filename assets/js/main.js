@@ -58,6 +58,21 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+const slideButton = document.querySelectorAll('.bar');    
+function linkAction(){
+  /*Active link*/
+  slideButton.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+}
+slideButton.forEach(n => n.addEventListener('click', linkAction));
+
+
+let sliderCount = 1;
+document.getElementsByClassName('.bar').item('active');
+
+setInterval(function() {
+	linkAction();	
+}, 4000)
 
 let count = 1;
 document.getElementById("r1").checked = true;
