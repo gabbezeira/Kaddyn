@@ -64,7 +64,7 @@ document.getElementById("r1").checked = true;
 
 setInterval(function(){
 	nextImage();
-}, 2000)
+}, 4000)
 
 function nextImage() {
 	count++;
@@ -73,4 +73,20 @@ function nextImage() {
 	}
 
 	document.getElementById("r"+count).checked = true;
+}
+
+let countB = 1;
+document.getElementById("r1").active = true;
+
+setInterval(function(){
+	nextImage();
+}, 4000)
+
+function nextImage() {
+	countB++;
+	if(countB>4){
+		countB = 1;
+	}
+
+	document.getElementById("r"+countB).active = true;
 }
