@@ -60,7 +60,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 let count = 1;
-const slideButtonS = document.querySelectorAll('.bar');
+document.querySelectorAll('.bar').active = true;
 document.getElementById("r1").checked = true;
 
 setInterval(function(){
