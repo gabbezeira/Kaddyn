@@ -60,6 +60,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 let count = 1;
+const slideButtonS = document.querySelectorAll('.bar');
 document.getElementById("r1").checked = true;
 
 setInterval(function(){
@@ -72,21 +73,10 @@ function nextImage() {
 		count = 1;
 	}
 
+	slideButtonS.forEach(n => n.classList.remove('active'));
+  	this.classList.add('active');
+
 	document.getElementById("r"+count).checked = true;
-}
 
-let countB = 1;
-document.getElementById("r1").active = true;
-
-setInterval(function(){
-	nextImage();
-}, 4000)
-
-function nextImage() {
-	countB++;
-	if(countB>4){
-		countB = 1;
-	}
-
-	document.getElementById("r"+countB).active = true;
+	document.getElementById("")
 }
