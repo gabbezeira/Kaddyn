@@ -73,6 +73,4 @@ function nextImage() {
 	}
 
 	document.getElementById("r"+count).checked = true;
-
-	document.getElementById("")
 }
